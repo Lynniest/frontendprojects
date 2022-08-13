@@ -1,0 +1,152 @@
+:root{
+  --cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --darkBlue: hsl(212, 21%, 14%);
+  --darkGrey: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  font-family: 'Montserrat','Fraunces', serif;
+  font-size: 14px;
+  color: var(--darkGrey);
+  background: var(--cream);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.container{
+  background: var(--white);
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+  display: flex;
+  padding: 0;
+  margin-top: 8%;
+}
+
+#brand-img{
+  width: 250px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.description{
+  width: 260px;
+  height: auto;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.header-txt{
+  width: 80%;
+  margin: 20px 0 20px;
+}
+h1{
+  color: var(--darkBlue);
+  font-family: 'Fraunces', sans-serif;
+  font-weight: 700;
+}
+
+h4{
+  font-family: 'Montserrat','Fraunces', serif;
+  font-weight: 500;
+}
+
+.price{
+  display: grid;
+  grid-template-areas:
+  "current old";
+  justify-content: flex-start;
+  align-items: center;
+}
+#current_price{
+  margin-right: 10px;
+  grid-area: "current";
+  align-self: baseline;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cyan);
+  font-family: 'Fraunces', serif;
+}
+
+#old_price{
+  grid-area: "old";
+  text-decoration: line-through;
+}
+#brand-img-mobile{
+  display: none;
+}
+
+#atc_btn{
+  margin: 25px 0;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  /* font-family: 'Fraunces', serif; */
+  color: var(--white);
+  background: var(--cyan);
+  border: 0;
+  font-weight: 500;
+}
+#cart-icon{
+  height: 13px;
+  width: auto;
+  margin-right: 15px;
+}
+#atc_btn:hover{
+  background: #184131;
+}
+
+footer{
+  justify-content: flex-end;
+  align-self: flex-end;
+  font-size: 11px;
+  text-align: center;
+  margin: 10% 20px 20px;
+  /* position: absolute;
+  bottom: 10px;
+  right: 30px; */
+}
+footer a{
+  color: hsl(228, 45%, 44%);
+}
+@media only screen and (max-width: 560px) {
+  .container{
+    width: 85%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-txt{
+    width: 100%;
+  }
+  #brand-img{
+    display: none;
+  }
+  #brand-img-mobile{
+    display: block;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    align-self: flex-start;
+    height: auto;
+  }
+  #atc_btn{
+    width: 250px;
+  }
+  footer{
+    width: 85%;
+    bottom: 1px;
+    right: 0px;
+  }
+}
